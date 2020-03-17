@@ -44,6 +44,7 @@ gem 'jquery-rails'
 gem 'logger', '~> 1.4', '>= 1.4.2'
 gem 'fileutils', '~> 1.4', '>= 1.4.1'
 gem 'pdf-reader', '~> 2.4'
+gem 'Ascii85', '~> 1.0', '>= 1.0.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

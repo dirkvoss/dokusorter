@@ -222,6 +222,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  Ascii85 (~> 1.0, >= 1.0.3)
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.4.1)
   byebug
