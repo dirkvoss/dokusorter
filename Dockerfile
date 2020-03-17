@@ -1,5 +1,5 @@
 FROM ruby:2.5
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client ocrmypdf
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client ocrmypdf tesseract-ocr-deu
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
