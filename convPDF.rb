@@ -11,7 +11,7 @@ map2Dir = {
             "Huk-Coburg"              => "Versicherungen"
 					}
 
-maindir='/mnt/freenas/02_users/dirk/convPDF/'
+maindir='/myapp/'
 ocrbin='/usr/bin/ocrmypdf --force-ocr -l deu '
 origdir='/mnt/freenas/07_Dokumente/Scan/'
 
