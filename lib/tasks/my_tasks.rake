@@ -19,7 +19,7 @@ outdir=origdir + 'Inbox/ScannedOCR/'
 errdir=origdir + 'Inbox/ScannedError/'
 defaultdir=origdir + 'Mix/'
 
-logdir=maindir + 'log/';
+logdir=maindir + 'rakelog/';
 logfile=logdir + 'convPDF.log'
 sleeptime=600
 
