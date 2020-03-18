@@ -2,13 +2,10 @@ namespace :my_tasks do
   desc "TODO"
   task scanDir: :environment do
 
-  map2Dir = { 
-						"Vattenfall" 	            => "GasWasserStrom", 
-            "barclaycard"		          => "Bank",
-            "kontoauszug"             => "Bank",
-            "Huk-Coburg"              => "Versicherungen"
-					  }
-
+map2Dir = Hash.new
+Mapping.all.each do |map|
+   map2Dir[map.regexstring] = map.direcory
+end  
 
 maindir='/myapp/'
 ocrbin='/usr/bin/ocrmypdf --force-ocr -l deu '
