@@ -12,6 +12,8 @@ services:
     volumes:
       - .:/myapp
       - /mnt/freenas/07_Dokumente/Scan/:/scan:rw
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
     ports:
       - "3000:3000"
     depends_on:
