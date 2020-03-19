@@ -1,5 +1,5 @@
 FROM ruby:2.5
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client ocrmypdf tesseract-ocr-deu
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client ocrmypdf tesseract-ocr-deu cron
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
@@ -12,6 +12,9 @@ COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
+
+#RUN service cron start
+RUN bundle exec whenever --update-crontab
 
 # Start the main process.
 CMD ["rails", "server", "-b", "0.0.0.0"]
