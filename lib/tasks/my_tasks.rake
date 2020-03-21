@@ -2,11 +2,6 @@ namespace :my_tasks do
   desc "TODO"
   task scanDir: :environment do
 
-map2Dir = Hash.new
-Mapping.all.each do |map|
-   map2Dir[map.regexstring] = map.direcory
-end  
-
 maindir='/myapp/'
 ocrbin='/usr/bin/ocrmypdf --force-ocr -l deu '
 origdir='/scan/'
@@ -26,6 +21,12 @@ log = Logger.new(logfile, 'monthly')
   log.debug "No PDF file in  #{indir} " if Dir.empty?(indir)
 
   Dir.glob('*.pdf', base: indir) do |file|
+
+    map2Dir = Hash.new
+    Mapping.all.each do |map|
+      map2Dir[map.regexstring] = map.direcory
+    end
+
     infile=indir + file
     cmd=ocrbin + indir + file + ' ' + outdir + file + " 2>&1"
     execute=`#{cmd}`
