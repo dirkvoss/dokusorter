@@ -46,6 +46,7 @@ gem 'logger', '~> 1.4', '>= 1.4.2'
 gem 'fileutils', '~> 1.4', '>= 1.4.1'
 gem 'pdf-reader', '~> 2.4'
 gem 'Ascii85', '~> 1.0', '>= 1.0.3'
+gem 'devise'
 
 # Crontab to execute rake task
 gem 'whenever', require: false
