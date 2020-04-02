@@ -1,5 +1,6 @@
 class MappingsController < ApplicationController
   before_action :set_mapping, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /mappings
   # GET /mappings.json
@@ -71,4 +72,5 @@ class MappingsController < ApplicationController
     def mapping_params
       params.require(:mapping).permit(:regexstring, :direcory)
     end
+
 end
